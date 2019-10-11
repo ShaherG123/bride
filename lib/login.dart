@@ -27,8 +27,7 @@ class LoginPage extends StatelessWidget {
         painter: CurvePainter5(),
         child: CustomPaint(
           painter: CurvePainter4(),
-          child: CustomPaint(
-            painter: CurvePainter3(),
+
               child: CustomPaint(
                 child: Container(
                   child: new Column(
@@ -38,7 +37,7 @@ class LoginPage extends StatelessWidget {
                     child: Text(
                       "Log in",
                       style: TextStyle(
-                        color: Colors.pink[700],
+                        color: Colors.white,
                         fontWeight: FontWeight.normal,
                         fontSize: 40,
                         fontFamily: R.amaranthFontFamily
@@ -119,7 +118,7 @@ class LoginPage extends StatelessWidget {
                       )),
                   new Container(
                     padding:
-                        EdgeInsets.only(right: width / 10, top: height / 20),
+                        EdgeInsets.only(right: width / 10, top: height / 30),
                     child: new Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: <Widget>[
@@ -142,12 +141,12 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                   new Container(
-                      padding: EdgeInsets.only(top: height / 12),
+                      padding: EdgeInsets.only(top: height / 20),
                       child: ButtonTheme(
                         minWidth: width / 1.8,
                         height: 60,
                         child: RaisedButton(
-                          color: Colors.pink[700],
+                          color: Colors.pink[300],
                           onPressed: () {
                             Navigator.push(
                                   context,
@@ -163,7 +162,7 @@ class LoginPage extends StatelessWidget {
                         ),
                       )),
                   new Container(
-                      padding: EdgeInsets.only(top: height / 10),
+                      padding: EdgeInsets.only(top: height / 50),
                       child: new Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
@@ -206,7 +205,6 @@ class LoginPage extends StatelessWidget {
             ),
           
         ),
-      ),
     );
   }
 }
@@ -222,7 +220,7 @@ class CurvePainter1 extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     var paint = Paint();
-    paint.color = Colors.grey[200];
+    paint.color = Colors.pink[300];
     paint.style = PaintingStyle.fill;
 
     var path = Path();
@@ -310,7 +308,7 @@ class CurvePainter4 extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     var paint = Paint();
-    paint.color = Colors.pink[200];
+    paint.color = Colors.pink[100];
     paint.style = PaintingStyle.fill;
     var path = Path();
 
@@ -339,7 +337,7 @@ class CurvePainter5 extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     var paint = Paint();
-    paint.color = Colors.pink[100];
+    paint.color = Colors.pink[50];
     paint.style = PaintingStyle.fill;
 
     var path = Path();

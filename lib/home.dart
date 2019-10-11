@@ -20,7 +20,7 @@ class Home extends StatelessWidget {
     return new Scaffold(
       resizeToAvoidBottomInset: false,
       body: CustomPaint(
-        painter: CurvePainter5(),
+        painter: CurvePainter4(),
         child: CustomPaint(
           child: Container(
             child: new Column(children: <Widget>[
@@ -30,7 +30,7 @@ class Home extends StatelessWidget {
                 child: Text(
                   "HOME",
                   style: TextStyle(
-                      color: Colors.pink[700],
+                      color: Colors.white,
                       fontWeight: FontWeight.normal,
                       fontSize: 40,
                       fontFamily: R.amaranthFontFamily),
@@ -56,7 +56,7 @@ class CurvePainter1 extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     var paint = Paint();
-    paint.color = Colors.grey[200];
+    paint.color = Colors.pink[300];
     paint.style = PaintingStyle.fill;
 
     var path = Path();
@@ -116,16 +116,16 @@ class CurvePainter4 extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     var paint = Paint();
-    paint.color = Colors.pink[200];
+    paint.color = Colors.pink[50];
     paint.style = PaintingStyle.fill;
     var path = Path();
 
-    path.moveTo(0, size.height * 0.7);
+    path.moveTo(0, size.height * 0.8);
 
-    path.quadraticBezierTo(size.width * 0.1, size.height * 0.8,
-        size.width * 0.3, size.height * 0.8);
-    path.quadraticBezierTo(size.width * 0.2, size.height * 0.8,
-        size.width * 1.0, size.height * 0.8);
+    path.quadraticBezierTo(size.width * 0.1, size.height * 0.9,
+        size.width * 0.3, size.height * 0.9);
+    path.quadraticBezierTo(size.width * 0.2, size.height * 0.9,
+        size.width * 1.0, size.height * 0.9);
 
     path.lineTo(size.width, size.height - 800);
 

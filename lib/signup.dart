@@ -32,7 +32,7 @@ class signup extends StatelessWidget {
                   child: Text(
                     "Sign Up",
                     style: TextStyle(
-                      color: Colors.pink[700],
+                      color: Colors.white,
                       fontWeight: FontWeight.normal,
                       fontSize: 40,
                       fontFamily: R.amaranthFontFamily
@@ -43,7 +43,7 @@ class signup extends StatelessWidget {
                   ),
                 ),
                 new Container(
-                    padding: EdgeInsets.only(top: height / 12),
+                    padding: EdgeInsets.only(top: height / 15),
                     width: width / 1.2,
                     child: new TextField(
                       autocorrect: true,
@@ -184,7 +184,7 @@ class signup extends StatelessWidget {
                       minWidth: width / 1.8,
                       height: 60,
                       child: RaisedButton(
-                        color: Colors.pink[700],
+                        color: Colors.pink[300],
                         onPressed: () {
                            Navigator.push(
                                   context,
@@ -214,7 +214,7 @@ class CurvePainter1 extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     var paint = Paint();
-    paint.color = Colors.grey[200];
+    paint.color = Colors.pink[300];
     paint.style = PaintingStyle.fill;
 
     var path = Path();
@@ -304,7 +304,7 @@ class CurvePainter4 extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     var paint = Paint();
-    paint.color = Colors.pink[200];
+    paint.color = Colors.pink[100];
     paint.style = PaintingStyle.fill;
     var path = Path();
 
@@ -333,7 +333,7 @@ class CurvePainter5 extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     var paint = Paint();
-    paint.color = Colors.pink[100];
+    paint.color = Colors.pink[50];
     paint.style = PaintingStyle.fill;
 
     var path = Path();
