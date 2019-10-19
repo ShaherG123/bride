@@ -28,7 +28,7 @@ class signup extends StatelessWidget {
               width: width,
               child: new Column(children: <Widget>[
                 Container(
-                  padding: EdgeInsets.only(top: height / 10),
+                  padding: EdgeInsets.only(top: height / 15),
                   child: Text(
                     "Sign Up",
                     style: TextStyle(
@@ -179,7 +179,7 @@ class signup extends StatelessWidget {
                       ),
                     )),
                 new Container(
-                    padding: EdgeInsets.only(top: height / 7),
+                    padding: EdgeInsets.only(top: height / 10),
                     child: ButtonTheme(
                       minWidth: width / 1.8,
                       height: 60,
@@ -206,154 +206,5 @@ class signup extends StatelessWidget {
         ),
       ),
     );
-  }
-}
-
-/////////////////////////////////////////////////////////////////
-class CurvePainter1 extends CustomPainter {
-  @override
-  void paint(Canvas canvas, Size size) {
-    var paint = Paint();
-    paint.color = Colors.pink[300];
-    paint.style = PaintingStyle.fill;
-
-    var path = Path();
-
-    path.moveTo(0, size.height * 0.1);
-
-    path.quadraticBezierTo(size.width * 0.1, size.height * 0.2,
-        size.width * 0.3, size.height * 0.2);
-    path.quadraticBezierTo(size.width * 0.2, size.height * 0.2,
-        size.width * 1.0, size.height * 0.2);
-
-    path.lineTo(size.width, size.height - 800);
-
-    path.lineTo(0, size.height - 800);
-
-    canvas.drawPath(path, paint);
-  }
-
-  @override
-  bool shouldRepaint(CustomPainter oldDelegate) {
-    return true;
-  }
-}
-
-/////////////////////////////////////////////////////////////////
-class CurvePainter2 extends CustomPainter {
-  @override
-  void paint(Canvas canvas, Size size) {
-    var paint = Paint();
-    paint.color = Colors.pink[400];
-    paint.style = PaintingStyle.fill;
-
-    var path = Path();
-
-    path.moveTo(0, size.height * 0.3);
-
-    path.quadraticBezierTo(size.width * 0.1, size.height * 0.4,
-        size.width * 0.3, size.height * 0.4);
-    path.quadraticBezierTo(size.width * 0.2, size.height * 0.4,
-        size.width * 1.0, size.height * 0.4);
-
-    path.lineTo(size.width, size.height - 800);
-
-    path.lineTo(0, size.height - 800);
-
-    canvas.drawPath(path, paint);
-  }
-
-  @override
-  bool shouldRepaint(CustomPainter oldDelegate) {
-    return true;
-  }
-}
-
-/////////////////////////////////////////////////////////////////
-class CurvePainter3 extends CustomPainter {
-  @override
-  void paint(Canvas canvas, Size size) {
-    var paint = Paint();
-    paint.color = Colors.pink[300];
-    paint.style = PaintingStyle.fill;
-
-    var path = Path();
-
-    path.moveTo(0, size.height * 0.5);
-
-    path.quadraticBezierTo(size.width * 0.1, size.height * 0.6,
-        size.width * 0.3, size.height * 0.6);
-    path.quadraticBezierTo(size.width * 0.2, size.height * 0.6,
-        size.width * 1.0, size.height * 0.6);
-
-    path.lineTo(size.width, size.height - 800);
-
-    path.lineTo(0, size.height - 800);
-
-    canvas.drawPath(path, paint);
-  }
-
-  @override
-  bool shouldRepaint(CustomPainter oldDelegate) {
-    return true;
-  }
-}
-
-/////////////////////////////////////////////////////////////////
-class CurvePainter4 extends CustomPainter {
-  @override
-  void paint(Canvas canvas, Size size) {
-    var paint = Paint();
-    paint.color = Colors.pink[100];
-    paint.style = PaintingStyle.fill;
-    var path = Path();
-
-    path.moveTo(0, size.height * 0.7);
-
-    path.quadraticBezierTo(size.width * 0.1, size.height * 0.8,
-        size.width * 0.3, size.height * 0.8);
-    path.quadraticBezierTo(size.width * 0.2, size.height * 0.8,
-        size.width * 1.0, size.height * 0.8);
-
-    path.lineTo(size.width, size.height - 800);
-
-    path.lineTo(0, size.height - 800);
-
-    canvas.drawPath(path, paint);
-  }
-
-  @override
-  bool shouldRepaint(CustomPainter oldDelegate) {
-    return true;
-  }
-}
-
-/////////////////////////////////////////////////////////////////
-class CurvePainter5 extends CustomPainter {
-  @override
-  void paint(Canvas canvas, Size size) {
-    var paint = Paint();
-    paint.color = Colors.pink[50];
-    paint.style = PaintingStyle.fill;
-
-    var path = Path();
-
-    path.moveTo(0, size.height * 0.9);
-
-    path.quadraticBezierTo(
-        size.width * 0.1, size.height * 01, size.width * 0.3, size.height * 01);
-    path.quadraticBezierTo(
-        size.width * 0.2, size.height * 01, size.width * 1.0, size.height * 01);
-
-    path.lineTo(size.width, size.height - 800);
-
-    path.lineTo(0, size.height - 800);
-
-    canvas.drawPath(path, paint);
-  }
-
-  @override
-  bool shouldRepaint(CustomPainter oldDelegate) {
-    return true;
   }
 }

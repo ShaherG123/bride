@@ -39,7 +39,7 @@ class Home extends StatelessWidget {
               ),
               new Container(
                 child: CustomPaint(
-                  painter: DrawCircle(),
+                  
                 ),
               )
             ]),
@@ -50,8 +50,6 @@ class Home extends StatelessWidget {
     );
   }
 }
-
-/////////////////////////////////////////////////////////////////
 class CurvePainter1 extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
@@ -67,6 +65,36 @@ class CurvePainter1 extends CustomPainter {
         size.width * 0.3, size.height * 0.2);
     path.quadraticBezierTo(size.width * 0.2, size.height * 0.2,
         size.width * 1.0, size.height * 0.2);
+
+    path.lineTo(size.width, size.height - 800);
+
+    path.lineTo(0, size.height - 800);
+
+    canvas.drawPath(path, paint);
+  }
+
+  @override
+  bool shouldRepaint(CustomPainter oldDelegate) {
+    return true;
+  }
+}
+
+/////////////////////////////////////////////////////////////////
+class CurvePainter2 extends CustomPainter {
+  @override
+  void paint(Canvas canvas, Size size) {
+    var paint = Paint();
+    paint.color = Colors.pink[400];
+    paint.style = PaintingStyle.fill;
+
+    var path = Path();
+
+    path.moveTo(0, size.height * 0.3);
+
+    path.quadraticBezierTo(size.width * 0.1, size.height * 0.4,
+        size.width * 0.3, size.height * 0.4);
+    path.quadraticBezierTo(size.width * 0.2, size.height * 0.4,
+        size.width * 1.0, size.height * 0.4);
 
     path.lineTo(size.width, size.height - 800);
 
@@ -116,7 +144,7 @@ class CurvePainter4 extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     var paint = Paint();
-    paint.color = Colors.pink[50];
+    paint.color = Colors.pink[100];
     paint.style = PaintingStyle.fill;
     var path = Path();
 
@@ -145,7 +173,7 @@ class CurvePainter5 extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     var paint = Paint();
-    paint.color = Colors.pink[100];
+    paint.color = Colors.pink[50];
     paint.style = PaintingStyle.fill;
 
     var path = Path();
@@ -169,26 +197,3 @@ class CurvePainter5 extends CustomPainter {
     return true;
   }
 }
-
-//////////////////////////////////////////////////////////////////////
-class DrawCircle extends CustomPainter {
-  Paint _paint;
-
-  DrawCircle() {
-    _paint = Paint()
-      ..color = Colors.pink[200]
-      ..strokeWidth = 2.0
-      ..style = PaintingStyle.stroke;
-  }
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    canvas.drawCircle(Offset(0.0, 300), 30.0, _paint);
-  }
-
-  @override
-  bool shouldRepaint(CustomPainter oldDelegate) {
-    return false;
-  }
-}
-
